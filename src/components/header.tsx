@@ -20,7 +20,9 @@ export function Header() {
         </div>
 
         <div className="flex items-center">
-          <p>Right</p>
+          <NavButton href="/tickets" label="Tickets" icon={File} />
+
+          <NavButton href="/customers" label="Customers" icon={UsersRound} />
         </div>
       </div>
     </header>

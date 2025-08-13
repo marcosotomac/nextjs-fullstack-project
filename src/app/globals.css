@@ -4,7 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 .bg-home-img {
-  background-image: url('/home.jpg');
+  background-image: url("/home.jpg");
 }
 
 @theme inline {
@@ -45,6 +45,8 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --animate-appear: appear 1s ease-in-out;
+  --animate-slide: slide 750ms ease-in-out;
 }
 
 :root {
@@ -122,5 +124,23 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
